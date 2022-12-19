@@ -67,4 +67,25 @@ def adjust_results4_isadog(results_dic, dogfile):
     Returns:
            None - results_dic is mutable data type so no return needed.
     """           
-    None
+    data = set()
+    with open(dogfile, 'r') as f:
+      file_data = f.read()
+      data = file_data.rsplit("\n")
+    
+    for d in data:
+        d = d.strip().lower()
+    data.remove('')
+    data.remove('dog')
+
+    for filename, matrix in results_dic.items() :
+        if(matrix[0] in data):
+            matrix[3] = 1
+        else :
+            matrix[3] = 0
+        
+        if(matrix[1] in data):
+            matrix[4] = 1
+        else :
+            matrix[4] = 0
+        
+       

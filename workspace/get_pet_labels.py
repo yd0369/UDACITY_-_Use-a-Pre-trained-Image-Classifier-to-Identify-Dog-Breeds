@@ -40,6 +40,34 @@ def get_pet_labels(image_dir):
       List. The list contains for following item:
          index 0 = pet image label (string)
     """
+    # Creates empty dictionary named results_dic
+    results_dic = dict()
+
+    # Retrieve the filenames from folder pet_images/
+    filename_list = listdir(image_dir)
+   
+    for filename in filename_list:
+        if(filename[0] == "."): continue
+        tmp_label = filename
+        tmp_label = tmp_label.split(".")[0]
+        tmp_label = tmp_label.strip()
+        tmp_label = tmp_label.lower()
+        
+        # Filtering Text for Label
+        label = ""
+        for ch in tmp_label :
+            if(ch.isalpha()) :
+                label += ch
+            elif(ch == "_") :
+                label += " "
+            else : continue
+        label = label.strip()
+        
+        if filename not in results_dic:
+             results_dic[filename] = [label, None, None, None, None]
+
+#     for k,v in results_dic.items():
+#         print(">>>>",k, ":", v)
     # Replace None with the results_dic dictionary that you created with this
     # function
-    return None
+    return results_dic

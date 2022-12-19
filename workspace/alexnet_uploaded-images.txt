@@ -1,0 +1,147 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = alexnet 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 12 key-value pairs.
+Below are 10 of them:
+ 1 key:                       CAT.jpeg  label:                        cat
+ 2 key:       pembroke-welsh-corgi.jpg  label:         pembrokewelshcorgi
+ 3 key:                       CUTE.jpg  label:                       cute
+ 4 key:             english setter.jpg  label:              englishsetter
+ 5 key:              chihuahua - a.jpg  label:                 chihuahuaa
+ 6 key:                     COOKIE.jpg  label:                     cookie
+ 7 key:           Golden Retriever.jpg  label:            goldenretriever
+ 8 key:                     CORGI.jpeg  label:                      corgi
+ 9 key:             yd0369_github.jpeg  label:                  yd github
+10 key: Staffordshire-------------Bull_Terrier.jpeg  label:  staffordshirebull terrier
+
+     MATCH:
+
+                    CORGI.jpeg: 
+Real:                      corgi   Classifier: pembroke, pembroke welsh corgi, corgi
+
+ NOT A MATCH:
+
+                      CAT.jpeg: 
+Real:                        cat   Classifier:                       malinois
+
+      pembroke-welsh-corgi.jpg: 
+Real:         pembrokewelshcorgi   Classifier:                       papillon
+
+                      CUTE.jpg: 
+Real:                       cute   Classifier:              eskimo dog, husky
+
+            english setter.jpg: 
+Real:              englishsetter   Classifier:               golden retriever
+
+             chihuahua - a.jpg: 
+Real:                 chihuahuaa   Classifier:                     pomeranian
+
+                    COOKIE.jpg: 
+Real:                     cookie   Classifier:                        toaster
+
+          Golden Retriever.jpg: 
+Real:            goldenretriever   Classifier:                          stove
+
+            yd0369_github.jpeg: 
+Real:                  yd github   Classifier:                        syringe
+
+Staffordshire-------------Bull_Terrier.jpeg: 
+Real:  staffordshirebull terrier   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+                 Courage 2.jpg: 
+Real:                    courage   Classifier:                           mask
+
+             chihuahua - b.jpg: 
+Real:                 chihuahuab   Classifier:              italian greyhound
+
+# Total Images 12 # Matches: 1 # NOT Matches: 11
+
+     MATCH:
+
+                    CORGI.jpeg: 
+Real:                      corgi   Classifier: pembroke, pembroke welsh corgi, corgi  
+PetLabelDog: 1  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                      CAT.jpeg: 
+Real:                        cat   Classifier:                       malinois  
+PetLabelDog: 0  ClassLabelDog: 1
+
+      pembroke-welsh-corgi.jpg: 
+Real:         pembrokewelshcorgi   Classifier:                       papillon  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                      CUTE.jpg: 
+Real:                       cute   Classifier:              eskimo dog, husky  
+PetLabelDog: 0  ClassLabelDog: 1
+
+            english setter.jpg: 
+Real:              englishsetter   Classifier:               golden retriever  
+PetLabelDog: 0  ClassLabelDog: 1
+
+             chihuahua - a.jpg: 
+Real:                 chihuahuaa   Classifier:                     pomeranian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                    COOKIE.jpg: 
+Real:                     cookie   Classifier:                        toaster  
+PetLabelDog: 0  ClassLabelDog: 0
+
+          Golden Retriever.jpg: 
+Real:            goldenretriever   Classifier:                          stove  
+PetLabelDog: 0  ClassLabelDog: 0
+
+            yd0369_github.jpeg: 
+Real:                  yd github   Classifier:                        syringe  
+PetLabelDog: 0  ClassLabelDog: 0
+
+Staffordshire-------------Bull_Terrier.jpeg: 
+Real:  staffordshirebull terrier   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                 Courage 2.jpg: 
+Real:                    courage   Classifier:                           mask  
+PetLabelDog: 0  ClassLabelDog: 0
+
+             chihuahua - b.jpg: 
+Real:                 chihuahuab   Classifier:              italian greyhound  
+PetLabelDog: 0  ClassLabelDog: 1
+
+# Total Images 12 # Matches: 1 # NOT Matches: 11
+
+ ** Statistics from calculates_results_stats() function:
+N Images: 12  N Dog Images:  1  N NotDog Images: 11 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  36.4  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images: 12  N Dog Images:  1  N NotDog Images: 11 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  36.4  Pct Corr Breed: 100.0
+========================================
+
+
+*** Results Summary for CNN Model Architecture ALEXNET ***
+n_images                 : 12.000
+n_dogs_img               : 1.000
+n_notdogs_img            : 11.000
+n_correct_dogs           : 1.000
+n_correct_notdogs        : 4.000
+n_correct_breed          : 1.000
+n_match                  : 1.000
+pct_correct_dogs         : 100.000
+pct_correct_notdogs      : 36.364
+pct_correct_breed        : 100.000
+pct_match                : 8.333
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        cat   Classifier:                       malinois
+Real:         pembrokewelshcorgi   Classifier:                       papillon
+Real:                       cute   Classifier:              eskimo dog, husky
+Real:              englishsetter   Classifier:               golden retriever
+Real:                 chihuahuaa   Classifier:                     pomeranian
+Real:  staffordshirebull terrier   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+Real:                 chihuahuab   Classifier:              italian greyhound
+
+** Total Elapsed Runtime: 0:0:1

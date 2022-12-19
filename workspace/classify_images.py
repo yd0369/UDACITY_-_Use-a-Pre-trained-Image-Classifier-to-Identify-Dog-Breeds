@@ -65,4 +65,12 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-    None 
+    for filename, matrix in results_dic.items() :
+        model_output = classifier(images_dir+filename,model)
+        model_output = model_output.strip().lower()
+        matrix[1] = model_output
+        
+        if(results_dic[filename][0] in model_output or model_output in results_dic[filename][0]):
+            matrix[2] = 1
+        else : 
+            matrix[2] = 0

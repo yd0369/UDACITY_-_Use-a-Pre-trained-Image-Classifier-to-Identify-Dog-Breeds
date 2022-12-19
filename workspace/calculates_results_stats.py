@@ -68,6 +68,41 @@ def calculates_results_stats(results_dic):
                      and the previous topic Calculating Results in the class for details
                      on how to calculate the counts and statistics.
     """        
-    # Replace None with the results_stats_dic dictionary that you created with 
-    # this function 
-    return None
+    z=0 # Z: Number of Images
+    a=0 # A: Number of Correct Dog matches
+    b=0 # B: Number of Dog Images
+    c=0 # C: Number of Correct Non-Dog matches
+    d=0 # D: Number of Not Dog Images
+    e=0 # E: Number of Correct Breed matches
+    f=0 # F: Number of Correct Breed Not matches
+    y=0 # Y: Number of label matches
+    x=0 # X: Number of label not matches
+    
+    for filename, matrix in results_dic.items() :
+        z+=1
+        if(matrix[3]==1 and matrix[4]==1): a+=1
+        if(matrix[3]==1): b+=1
+        if(matrix[3]==0 and matrix[4]==0): c+=1
+        if(matrix[3]==0): d+=1
+        if(matrix[3]==1 and matrix[2]==1): e+=1
+        else : f+=1
+        if(matrix[2]==1): y+=1
+        else : x+=1
+    
+    results_stats_dic = dict()
+    results_stats_dic['n_images'] = z
+    results_stats_dic['n_dogs_img'] = b
+    results_stats_dic['n_notdogs_img'] = d
+    results_stats_dic['n_correct_dogs'] = a
+    results_stats_dic['n_correct_notdogs'] = c
+    results_stats_dic['n_correct_breed'] = e
+    results_stats_dic['n_match'] = y
+
+    results_stats_dic['pct_correct_dogs'] = a/b*100
+    results_stats_dic['pct_correct_notdogs'] = c/d*100
+    results_stats_dic['pct_correct_breed'] = e/b*100
+    results_stats_dic['pct_match'] = y/z*100
+    
+    
+    
+    return results_stats_dic

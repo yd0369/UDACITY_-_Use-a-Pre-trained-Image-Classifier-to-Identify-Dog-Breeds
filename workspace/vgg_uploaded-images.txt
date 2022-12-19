@@ -1,0 +1,147 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 12 key-value pairs.
+Below are 10 of them:
+ 1 key:                       CAT.jpeg  label:                        cat
+ 2 key:       pembroke-welsh-corgi.jpg  label:         pembrokewelshcorgi
+ 3 key:                       CUTE.jpg  label:                       cute
+ 4 key:             english setter.jpg  label:              englishsetter
+ 5 key:              chihuahua - a.jpg  label:                 chihuahuaa
+ 6 key:                     COOKIE.jpg  label:                     cookie
+ 7 key:           Golden Retriever.jpg  label:            goldenretriever
+ 8 key:                     CORGI.jpeg  label:                      corgi
+ 9 key:             yd0369_github.jpeg  label:                  yd github
+10 key: Staffordshire-------------Bull_Terrier.jpeg  label:  staffordshirebull terrier
+
+     MATCH:
+
+             chihuahua - a.jpg: 
+Real:                 chihuahuaa   Classifier:                      chihuahua
+
+                    CORGI.jpeg: 
+Real:                      corgi   Classifier: cardigan, cardigan welsh corgi, corgi
+
+             chihuahua - b.jpg: 
+Real:                 chihuahuab   Classifier:                      chihuahua
+
+ NOT A MATCH:
+
+                      CAT.jpeg: 
+Real:                        cat   Classifier:                    toy terrier
+
+      pembroke-welsh-corgi.jpg: 
+Real:         pembrokewelshcorgi   Classifier: pembroke, pembroke welsh corgi, corgi
+
+                      CUTE.jpg: 
+Real:                       cute   Classifier: cardigan, cardigan welsh corgi, corgi
+
+            english setter.jpg: 
+Real:              englishsetter   Classifier:                 english setter
+
+                    COOKIE.jpg: 
+Real:                     cookie   Classifier: ice bear, polar bear, ursus maritimus, thalarctos maritimus
+
+          Golden Retriever.jpg: 
+Real:            goldenretriever   Classifier:                      boathouse
+
+            yd0369_github.jpeg: 
+Real:                  yd github   Classifier:                     paintbrush
+
+Staffordshire-------------Bull_Terrier.jpeg: 
+Real:  staffordshirebull terrier   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+
+                 Courage 2.jpg: 
+Real:                    courage   Classifier:         piggy bank, penny bank
+
+# Total Images 12 # Matches: 3 # NOT Matches: 9
+
+     MATCH:
+
+             chihuahua - a.jpg: 
+Real:                 chihuahuaa   Classifier:                      chihuahua  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                    CORGI.jpeg: 
+Real:                      corgi   Classifier: cardigan, cardigan welsh corgi, corgi  
+PetLabelDog: 1  ClassLabelDog: 1
+
+             chihuahua - b.jpg: 
+Real:                 chihuahuab   Classifier:                      chihuahua  
+PetLabelDog: 0  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+                      CAT.jpeg: 
+Real:                        cat   Classifier:                    toy terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+      pembroke-welsh-corgi.jpg: 
+Real:         pembrokewelshcorgi   Classifier: pembroke, pembroke welsh corgi, corgi  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                      CUTE.jpg: 
+Real:                       cute   Classifier: cardigan, cardigan welsh corgi, corgi  
+PetLabelDog: 0  ClassLabelDog: 1
+
+            english setter.jpg: 
+Real:              englishsetter   Classifier:                 english setter  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                    COOKIE.jpg: 
+Real:                     cookie   Classifier: ice bear, polar bear, ursus maritimus, thalarctos maritimus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+          Golden Retriever.jpg: 
+Real:            goldenretriever   Classifier:                      boathouse  
+PetLabelDog: 0  ClassLabelDog: 0
+
+            yd0369_github.jpeg: 
+Real:                  yd github   Classifier:                     paintbrush  
+PetLabelDog: 0  ClassLabelDog: 0
+
+Staffordshire-------------Bull_Terrier.jpeg: 
+Real:  staffordshirebull terrier   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier  
+PetLabelDog: 0  ClassLabelDog: 1
+
+                 Courage 2.jpg: 
+Real:                    courage   Classifier:         piggy bank, penny bank  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 12 # Matches: 3 # NOT Matches: 9
+
+ ** Statistics from calculates_results_stats() function:
+N Images: 12  N Dog Images:  1  N NotDog Images: 11 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  36.4  Pct Corr Breed: 100.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images: 12  N Dog Images:  1  N NotDog Images: 11 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  36.4  Pct Corr Breed: 100.0
+========================================
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+n_images                 : 12.000
+n_dogs_img               : 1.000
+n_notdogs_img            : 11.000
+n_correct_dogs           : 1.000
+n_correct_notdogs        : 4.000
+n_correct_breed          : 1.000
+n_match                  : 3.000
+pct_correct_dogs         : 100.000
+pct_correct_notdogs      : 36.364
+pct_correct_breed        : 100.000
+pct_match                : 25.000
+
+INCORRECT Dog/NOT Dog Assignments:
+Real:                        cat   Classifier:                    toy terrier
+Real:         pembrokewelshcorgi   Classifier: pembroke, pembroke welsh corgi, corgi
+Real:                       cute   Classifier: cardigan, cardigan welsh corgi, corgi
+Real:              englishsetter   Classifier:                 english setter
+Real:                 chihuahuaa   Classifier:                      chihuahua
+Real:  staffordshirebull terrier   Classifier: american staffordshire terrier, staffordshire terrier, american pit bull terrier, pit bull terrier
+Real:                 chihuahuab   Classifier:                      chihuahua
+
+** Total Elapsed Runtime: 0:0:10
